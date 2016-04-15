@@ -7,15 +7,15 @@
     <script src="/vendor/angular/angular.min.js"></script>
     <script src="/assets/scripts/client.min.js"></script>
   </head>
-  <body ng-controller="GreenController">
+  <body ng-controller="GreenController as person">
     <h1>Names Here</h1>
-    <button ng-click ="getInfo()">Create</button>
-    <div ng-repeat="user in usersList">
-      Name:{{ user.personName }},
-      Age:{{user.personAge}},
-      Location:{{user.personLocation}},
-      personBirthplace: {{user.personBirthplace}},
-      Twitter:{{user.personTwitter}}
+    <button ng-click ="person.getInfo()">Create</button>
+    <div ng-repeat="people in person.usersList">
+      Name:{{ people.personName }},
+      Age:{{people.personAge}},
+      Location:{{people.personLocation}},
+      personBirthplace: {{people.personBirthplace}},
+      Twitter:{{people.personTwitter}}
     </div>
   </body>
 </html>
